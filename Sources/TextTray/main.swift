@@ -493,13 +493,8 @@ final class TemporaryClipboardApp: NSObject, NSApplicationDelegate, NSWindowDele
     }
 
     private func saveWindowFrame() {
-        guard let window, let screen = window.screen ?? NSScreen.main else { return }
-
-        // Save frame in screen-relative coordinates (flip Y from Cocoa to UserDefaults-friendly format)
-        var frame = window.frame
-        frame.origin.y = screen.frame.maxY - frame.maxY
-
-        let frameString = NSStringFromRect(frame)
+        guard let window else { return }
+        let frameString = NSStringFromRect(window.frame)
         UserDefaults.standard.set(frameString, forKey: PreferenceKey.windowFrame)
     }
 
@@ -585,7 +580,7 @@ final class TemporaryClipboardApp: NSObject, NSApplicationDelegate, NSWindowDele
             case "destroy": return "Destroy"
             case "destroyClose": return "Destroy and Close"
             case "settings": return "Settings"
-            case "about": return "About Text Tray"
+            case "about": return "About ScratchPad"
             case "preferences": return "Preferences..."
             case "quit": return "Quit"
             case "fileMenu": return "File"
@@ -659,7 +654,7 @@ final class TemporaryClipboardApp: NSObject, NSApplicationDelegate, NSWindowDele
             case "destroy": return "销毁"
             case "destroyClose": return "销毁并关闭"
             case "settings": return "设置"
-            case "about": return "关于 Text Tray"
+            case "about": return "关于 ScratchPad"
             case "preferences": return "偏好设置…"
             case "quit": return "退出"
             case "fileMenu": return "文件"
