@@ -6,17 +6,17 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>$(DEVELOPMENT_LANGUAGE)</string>
   <key>CFBundleDisplayName</key>
-  <string>Text Tray</string>
+  <string>ScratchPad</string>
   <key>CFBundleExecutable</key>
-  <string>TemporaryClipboardViewer</string>
+  <string>ScratchPad</string>
   <key>CFBundleIdentifier</key>
-  <string>local.temporary-clipboard-viewer</string>
+  <string>local.scratchpad</string>
   <key>CFBundleIconFile</key>
   <string>TextTray.icns</string>
   <key>CFBundleInfoDictionaryVersion</key>
   <string>6.0</string>
   <key>CFBundleName</key>
-  <string>Text Tray</string>
+  <string>ScratchPad</string>
   <key>CFBundlePackageType</key>
   <string>APPL</string>
   <key>CFBundleShortVersionString</key>

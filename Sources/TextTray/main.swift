@@ -556,8 +556,8 @@ final class TemporaryClipboardApp: NSObject, NSApplicationDelegate, NSWindowDele
         switch language {
         case .english:
             switch key {
-            case "windowTitle": return "Temporary Clipboard"
-            case "appName": return "Text Tray"
+            case "windowTitle": return "ScratchPad"
+            case "appName": return "ScratchPad"
             case "placeholder": return "No displayable text in Clipboard"
             case "pin": return "Keep on Top"
             case "process": return "Process"
@@ -630,8 +630,8 @@ final class TemporaryClipboardApp: NSObject, NSApplicationDelegate, NSWindowDele
             }
         case .chinese:
             switch key {
-            case "windowTitle": return "临时剪贴板"
-            case "appName": return "Text Tray"
+            case "windowTitle": return "临时文本托盘"
+            case "appName": return "临时文本托盘"
             case "placeholder": return "剪贴板中没有可显示的文字"
             case "pin": return "保持置顶"
             case "process": return "处理"
@@ -1101,7 +1101,7 @@ final class TemporaryClipboardApp: NSObject, NSApplicationDelegate, NSWindowDele
     @objc private func showAbout() {
         let alert = NSAlert()
         alert.messageText = tr("about")
-        alert.informativeText = "A temporary text tray. It does not save text, track clipboard history, or modify the system clipboard unless you explicitly copy."
+        alert.informativeText = "ScratchPad — a temporary text tray. It does not save text, track clipboard history, or modify the system clipboard unless you explicitly copy."
         alert.addButton(withTitle: tr("ok"))
         alert.runModal()
     }
